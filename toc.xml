@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Addon Author="Jordan" APIVersion="11" Name="RPBots" Description="Allows your bots to join in on Roleplay sessions">
+    <Script Name="RPBots.lua"/>
+    <Form Name="RPBots.xml"/>
+    <Script Name="GeminiDB-1.0.lua"/>
+    <Script Name="GeminiAddon.lua"/>
+    <Script Name="LibJSON-2.5.lua"/>
+    <Script Name="LibDialog-1.0.lua"/>
+</Addon>
