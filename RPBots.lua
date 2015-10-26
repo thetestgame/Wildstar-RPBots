@@ -154,8 +154,12 @@ function RPBots:SetupComms()
 	self.Comm:SetThrottledFunction("OnMessageThrottled", self)
 	if self.db.profile.debugMode then
 		print "Comms have been successfully setup."
-	end	
+	end
 end
+
+-----------------------------------------------------------------------------------------------
+-- RPBots PacketFactory class
+-----------------------------------------------------------------------------------------------
 
 local PacketFactory={}
 
@@ -177,7 +181,7 @@ function PacketFactory:createChatPacket(b, n, msg, r, ch, loc, w)
 		channel=ch,
 		location={pos=loc, world=w},
 	}
-	return plugin.json.encode(packetTable)
+	return self.plugin.json.encode(packetTable)
 end
 
 function PacketFactory:createNameplateRegisterPacket(bot, nameplate)
@@ -185,7 +189,7 @@ function PacketFactory:createNameplateRegisterPacket(bot, nameplate)
 		type="nameplate",
 		bot=b,
 	}	
-	return plugin.json.encode(packetTable)
+	return self.plugin.json.encode(packetTable)
 end
 
 -----------------------------------------------------------------------------------------------
